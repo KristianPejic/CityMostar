@@ -308,15 +308,21 @@ h2 {
   color: #2c3e50;
   margin-bottom: 20px;
 }
-
-.culture-item {
-  background: white;
-  padding: 30px;
-  margin: 30px auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+.container {
   max-width: 900px;
-  text-align: center;
+  margin: auto;
+  overflow: hidden;
+}
+.culture-item img,
+.landmark img,
+.gallery-grid img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  max-height: 500px;
+  object-fit: cover;
 }
 
 .gallery-section {
