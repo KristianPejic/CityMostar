@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt - Mostar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="assets/mostar-member-300x300-removebg-preview.ico" />
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="povijest.html">Povijest</a></li>
+          <li><a href="znamenitosti.html">Znamenitosti</a></li>
+          <li><a href="kultura.html">Kultura</a></li>
+          <li><a href="galerija.html">Galerija</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Kontaktirajte nas</h2>
+        <p>
+          Ako imate bilo kakva pitanja, slobodno nas kontaktirajte putem obrasca
+          ispod.
+        </p>
+
+        <form action="#" method="POST" class="contact-form">
+          <label for="name">Ime i prezime:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Unesite vaše ime"
+            required />
+
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Unesite vaš e-mail"
+            required />
+
+          <label for="message">Poruka:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Unesite vašu poruku"
+            required></textarea>
+
+          <button type="submit" class="btn">Pošalji</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
