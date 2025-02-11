@@ -425,9 +425,27 @@ h2 {
   padding-right: 5px;
   white-space: nowrap;
   overflow: hidden;
-  animation: blinkCursor 0.7s steps(2) infinite;
+  text-align: center;
+  max-width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+  #typewriter {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #typewriter {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #typewriter {
+    font-size: 24px;
+  }
+}
 @keyframes blinkCursor {
   50% {
     border-color: transparent;
