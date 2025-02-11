@@ -308,11 +308,7 @@ h2 {
   color: #2c3e50;
   margin-bottom: 20px;
 }
-.container {
-  max-width: 900px;
-  margin: auto;
-  overflow: hidden;
-}
+
 .culture-item img,
 .landmark img,
 .gallery-grid img {
@@ -355,4 +351,46 @@ h2 {
   font-size: 36px;
   color: #2c3e50;
   margin-bottom: 20px;
+}
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-container {
+  width: 80%;
+  margin: auto;
+}
+
+.footer p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    width: 90%;
+  }
 }
