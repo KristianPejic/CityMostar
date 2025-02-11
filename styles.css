@@ -76,13 +76,23 @@ h2 {
   color: white;
   text-decoration: none;
   font-size: 16px;
-  transition: color 0.3s;
-  padding: 8px;
-  display: block;
+  position: relative;
+  padding-bottom: 5px;
 }
 
-.nav-links li a:hover {
-  color: #f39c12;
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #f39c12;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -166,15 +176,28 @@ h2 {
   margin-bottom: 20px;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background: #f39c12;
   color: white;
   text-decoration: none;
   font-size: 18px;
   border-radius: 5px;
-  transition: background 0.3s;
+  animation: pulse 1.5s infinite ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 .btn:hover {
@@ -388,9 +411,25 @@ h2 {
   transform: scale(1.2);
 }
 
-/* Responsive Footer */
 @media screen and (max-width: 768px) {
   .footer-container {
     width: 90%;
+  }
+}
+#typewriter {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  border-right: 3px solid white;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blinkCursor 0.7s steps(2) infinite;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
   }
 }
